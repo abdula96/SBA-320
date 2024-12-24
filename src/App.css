@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.character-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+}
+
+.character-card img {
+  width: 100%;
+  height: auto;
+}
