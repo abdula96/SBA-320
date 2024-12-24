@@ -45,13 +45,6 @@ Features
 Character List
 The character list is fetched from the Rick and Morty API and displayed on the page. Each character's name, status, species, and gender are shown.
 
-Pagination
-Pagination is implemented to manage the large number of characters. The application fetches characters page by page and allows navigation between pages. The current page and the total number of pages are tracked in the state.
-
-Why is nextPage tracked for pagination? The nextPage state keeps track of the URL for the next set of characters to be loaded. This helps in efficient data fetching and handling the large number of characters without overwhelming the UI.
-Searching and Filtering
-Users can search for characters by name. The search input is connected to the Redux store, allowing for easy updates and efficient filtering of character data.
-
 Error Handling
 If an API request fails (e.g., no internet or invalid endpoint), the app displays a user-friendly error message.
 
