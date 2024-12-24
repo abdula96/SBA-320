@@ -32,7 +32,7 @@ How to Run the Project
 Follow these steps to set up and run the project locally:
 
 Clone the repository:
-git clone https://github.com/yourusername/rick-and-morty-character-viewer.git
+git clone [https://github.com/yourusername/rick-and-morty-character-viewer.git](https://github.com/abdula96/SBA320.git)
 Navigate to the project directory:
 cd rick-and-morty-character-viewer
 Install dependencies:
