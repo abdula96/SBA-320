@@ -83,5 +83,14 @@ Location and Episode Lists: Add views for locations and episodes from the API.
 State Persistence: Use localStorage or sessionStorage to persist state (e.g., current page or search query) across page reloads.
 Contributors
 
-[Abdula Ahmed]: Lead Developer and Project Manager
-[]: API Integration and Redux Logic
+[Abdula Ahmed]: Lead Developer 
+
+## Credits
+
+- **API Used**: [Rick and Morty API](https://rickandmortyapi.com/)
+  - This project integrates data from the **Rick and Morty API** to display characters, episodes, and locations from the show.
+  - The API provides free, public access to detailed information about the Rick and Morty universe, which is used in this application to create a dynamic and interactive experience.
+
+- **API Documentation**: [https://rickandmortyapi.com/docs](https://rickandmortyapi.com/docs)
+  - For more information on the API endpoints and how to use them, check out the official documentation.
+
