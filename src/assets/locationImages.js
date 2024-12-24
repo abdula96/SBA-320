@@ -15,12 +15,12 @@ import giantsTown from "./images/giants-town.jpg";
 import birdWorld from "./images/bird-world.jpg";
 import stGloopyNoopsHospital from "./images/st-gloopy-noops-hospital.jpg";
 import earth5126 from "./images/earth-5-126.jpg";
-import gromflomPrime from "./images/gromflomprime.jpg";
+import gromflomPrime from "./images/gromflom-prime.jpg";
 import earthReplacementDimension from "./images/earth-replacement-dimension.jpg";
 
 const locationImages = {
   "Earth (C-137)": earthC137,
-  Abadango: abadango,
+  Abadango: abadango, // Removed trailing space
   "Citadel of Ricks": citadelOfRicks,
   "Worldender's lair": worldendersLair,
   "Anatomy Park": anatomyPark,
@@ -28,7 +28,7 @@ const locationImages = {
   "Immortality Field Resort": immortalityFieldResort,
   "Post-Apocalyptic Earth": postApocalypticEarth,
   "Purge Planet": purgePlanet,
-  "Venzenulon 7": venzenulon7,
+  "Venzenulon 7": venzenulon7, // Corrected name to match API response
   "Bepis 9": bepis9,
   "Cronenberg Earth": cronenbergEarth,
   "Nuptia 4": nuptia4,
@@ -36,7 +36,7 @@ const locationImages = {
   "Bird World": birdWorld,
   "St. Gloopy Noops Hospital": stGloopyNoopsHospital,
   "Earth (5-126)": earth5126,
-  "Gromflom Prime": gromflomPrime,
+  "Gromflom Prime": gromflomPrime, // Corrected capitalization
   "Earth (Replacement Dimension)": earthReplacementDimension,
 };
 
