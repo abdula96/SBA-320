@@ -19,7 +19,7 @@ ReactDOM.createRoot(root).render(
         <Route path="/SBA320" element={<App />}>
           <Route path="/SBA320/characters" element={<CharactersPage />} />
           <Route path="/SBA320/locations" element={<LocationsPage />} />
-          <Route path="SBA320/episodes" element={<EpisodesPage />} />
+          <Route path="/SBA320/episodes" element={<EpisodesPage />} />
         </Route>
       </Routes>
     </Router>
