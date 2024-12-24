@@ -17,9 +17,9 @@ ReactDOM.createRoot(root).render(
     <Router>
       <Routes>
         <Route path="/SBA320" element={<App />}>
-          <Route path="characters" element={<CharactersPage />} />
-          <Route path="locations" element={<LocationsPage />} />
-          <Route path="episodes" element={<EpisodesPage />} />
+          <Route path="/SBA320/characters" element={<CharactersPage />} />
+          <Route path="/SBA320/locations" element={<LocationsPage />} />
+          <Route path="/SBA320/episodes" element={<EpisodesPage />} />
         </Route>
       </Routes>
     </Router>
