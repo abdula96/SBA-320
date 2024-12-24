@@ -28,6 +28,12 @@ Example response:
 }
 How to Run the Project
 
+To deploy the app to GitHub Pages:
+
+1. Run `npm run build` to build the production version of the app.
+2. Run `npm run deploy` to deploy the app to GitHub Pages.
+3. Visit the live site at `https://abdula96.github.io/SBA320`.
+
 
 Follow these steps to set up and run the project locally:
 
