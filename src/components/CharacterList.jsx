@@ -1,3 +1,4 @@
+// src/components/CharacterList.jsx
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCharacters } from "../features/characters/charactersSlice";
@@ -8,6 +9,8 @@ const CharacterList = () => {
     (state) => state.characters
   );
   const [selectedCharacter, setSelectedCharacter] = useState(null);
+  const [locationDetails, setLocationDetails] = useState(null);
+  const [episodeDetails, setEpisodeDetails] = useState([]);
 
   useEffect(() => {
     if (status === "idle") {
@@ -15,8 +18,21 @@ const CharacterList = () => {
     }
   }, [dispatch, status]);
 
-  const handleClick = (character) => {
+  const handleClick = async (character) => {
     setSelectedCharacter(character);
+    // Fetch location details
+    const locationResponse = await fetch(character.location.url);
+    const locationData = await locationResponse.json();
+    setLocationDetails(locationData);
+
+    // Fetch episode details
+    const episodePromises = character.episode.map(async (episodeUrl) => {
+      const episodeResponse = await fetch(episodeUrl);
+      return episodeResponse.json();
+    });
+
+    const episodes = await Promise.all(episodePromises);
+    setEpisodeDetails(episodes);
   };
 
   if (status === "loading") {
@@ -29,7 +45,6 @@ const CharacterList = () => {
 
   return (
     <div>
-      <h2>Rick and Morty Characters</h2>
       <div className="character-list">
         {characters.map((character) => (
           <div
@@ -52,8 +67,20 @@ const CharacterList = () => {
           <p>Status: {selectedCharacter.status}</p>
           <p>Species: {selectedCharacter.species}</p>
           <p>Origin: {selectedCharacter.origin.name}</p>
-          <p>Location: {selectedCharacter.location.name}</p>
-          {/* Add more details here */}
+          <p>
+            Location: {locationDetails ? locationDetails.name : "Loading..."}
+          </p>
+
+          {/* Episode details */}
+          <h4>Episodes:</h4>
+          <ul>
+            {episodeDetails.map((episode) => (
+              <li key={episode.id}>
+                {episode.name} (Season {episode.episode.split("E")[0]} - Episode{" "}
+                {episode.episode.split("E")[1]})
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </div>
