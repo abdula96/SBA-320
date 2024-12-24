@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchLocations } from "../features/location/locationSlice";
+import locationImages from "../assets/locationImages"; // Import the location images
 
 const LocationList = () => {
   const dispatch = useDispatch();
@@ -16,8 +17,7 @@ const LocationList = () => {
 
   const handleClick = async (location) => {
     setSelectedLocation(location);
-    // You can use location data to display more details
-    // For example, if there's a location image, it can be shown here
+    console.log(location.name); // Log to check if the location name is correct
   };
 
   if (status === "loading") {
@@ -37,6 +37,7 @@ const LocationList = () => {
             key={location.id}
             className="location-card"
             onClick={() => handleClick(location)}
+            style={{ cursor: "pointer", marginBottom: "20px" }} // Add card styling
           >
             <h3>{location.name}</h3>
             <p>{location.type}</p>
@@ -45,17 +46,23 @@ const LocationList = () => {
       </div>
 
       {selectedLocation && (
-        <div className="location-details">
+        <div className="location-details" style={{ marginTop: "20px" }}>
           <h3>{selectedLocation.name}</h3>
           <p>Type: {selectedLocation.type}</p>
           <p>Dimension: {selectedLocation.dimension}</p>
 
-          {/* Display location image if available */}
-          {selectedLocation.image ? (
+          {/* Display location image */}
+          {locationImages[selectedLocation.name] ? (
             <img
-              src={selectedLocation.image}
+              src={locationImages[selectedLocation.name]}
               alt={selectedLocation.name}
-              style={{ maxWidth: "100%", height: "auto" }}
+              style={{
+                width: "300px", // Fixed width
+                height: "200px", // Fixed height
+                objectFit: "cover", // Maintain aspect ratio, crop if necessary
+                borderRadius: "10px", // Optional: Rounded corners
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // Optional: Shadow for styling
+              }}
             />
           ) : (
             <p>No image available for this location.</p>
