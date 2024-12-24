@@ -34,12 +34,12 @@ Follow these steps to set up and run the project locally:
 Clone the repository:
 git clone [https://github.com/yourusername/rick-and-morty-character-viewer.git](https://github.com/abdula96/SBA320.git)
 Navigate to the project directory:
-cd rick-and-morty-character-viewer
+cd SBA320
 Install dependencies:
 npm install
 Start the development server:
 npm run dev
-Open your browser and navigate to http://localhost:3000 to view the project.
+Open your browser and navigate to http://localhost:5173/ to view the project.
 Features
 
 Character List
