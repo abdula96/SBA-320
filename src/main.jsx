@@ -8,7 +8,7 @@ import App from "./App";
 import CharactersPage from "./pages/CharactersPage";
 import LocationsPage from "./pages/LocationsPage";
 import EpisodesPage from "./pages/EpisodesPage";
-import "./index.css"; // Or your preferred CSS file
+import "./index.css";
 
 const root = document.getElementById("root");
 

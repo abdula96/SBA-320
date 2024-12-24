@@ -1,8 +1,7 @@
-// src/components/LocationList.jsx
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchLocations } from "../features/location/locationSlice";
-import locationImages from "../assets/locationImages"; // Import the location images
+import locationImages from "../assets/locationImages";
 
 const LocationList = () => {
   const dispatch = useDispatch();
@@ -17,7 +16,7 @@ const LocationList = () => {
 
   const handleClick = async (location) => {
     setSelectedLocation(location);
-    console.log(location.name); // Log to check if the location name is correct
+    console.log(location.name);
   };
 
   if (status === "loading") {
@@ -37,7 +36,7 @@ const LocationList = () => {
             key={location.id}
             className="location-card"
             onClick={() => handleClick(location)}
-            style={{ cursor: "pointer", marginBottom: "20px" }} // Add card styling
+            style={{ cursor: "pointer", marginBottom: "20px" }}
           >
             <h3>{location.name}</h3>
             <p>{location.type}</p>
@@ -57,11 +56,11 @@ const LocationList = () => {
               src={locationImages[selectedLocation.name]}
               alt={selectedLocation.name}
               style={{
-                width: "300px", // Fixed width
-                height: "200px", // Fixed height
-                objectFit: "cover", // Maintain aspect ratio, crop if necessary
-                borderRadius: "10px", // Optional: Rounded corners
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // Optional: Shadow for styling
+                width: "300px",
+                height: "200px",
+                objectFit: "cover",
+                borderRadius: "10px",
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
               }}
             />
           ) : (

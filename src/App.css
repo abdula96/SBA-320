@@ -1,26 +1,26 @@
 .character-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px; /* Reduce the gap between cards */
+  gap: 15px;
 }
 
 .character-card {
-  margin: 5px; /* Reduce margin for a tighter layout */
-  padding: 8px; /* Reduce padding for a compact design */
+  margin: 5px;
+  padding: 8px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  width: 120px; /* Smaller card width */
+  width: 120px;
   cursor: pointer;
   transition: transform 0.2s;
-  text-align: center; /* Centers the content */
+  text-align: center;
 }
 
 .character-card img {
-  width: 60px; /* Smaller image size */
-  height: 60px; /* Maintain square aspect ratio */
-  object-fit: cover; /* Crop images to fit perfectly */
-  border-radius: 50%; /* Make the images circular */
-  margin-bottom: 5px; /* Reduce space below the image */
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 5px;
 }
 
 .character-card:hover {

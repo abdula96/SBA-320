@@ -20,12 +20,11 @@ const CharacterList = () => {
 
   const handleClick = async (character) => {
     setSelectedCharacter(character);
-    // Fetch location details
+
     const locationResponse = await fetch(character.location.url);
     const locationData = await locationResponse.json();
     setLocationDetails(locationData);
 
-    // Fetch episode details
     const episodePromises = character.episode.map(async (episodeUrl) => {
       const episodeResponse = await fetch(episodeUrl);
       return episodeResponse.json();

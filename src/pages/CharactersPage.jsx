@@ -1,10 +1,8 @@
-// src/pages/CharactersPage.jsx
 import React from "react";
 import CharacterList from "../components/CharacterList";
 
 const CharactersPage = () => {
   const handleSelectCharacter = (character) => {
-    // Handle character selection (you can show more detailed info in a modal, etc.)
     console.log(character);
   };
 

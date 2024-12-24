@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-// Fetch locations from the Rick and Morty API
 export const fetchLocations = createAsyncThunk(
   "locations/fetchLocations",
   async (page = 1) => {
@@ -8,7 +7,7 @@ export const fetchLocations = createAsyncThunk(
       `https://rickandmortyapi.com/api/location?page=${page}`
     );
     const data = await response.json();
-    return { locations: data.results, nextPage: data.info.next }; // Return locations and next page URL
+    return { locations: data.results, nextPage: data.info.next };
   }
 );
 
@@ -16,7 +15,7 @@ const locationSlice = createSlice({
   name: "locations",
   initialState: {
     locations: [],
-    nextPage: null, // Track the next page URL
+    nextPage: null,
     status: "idle",
     error: null,
   },
@@ -28,7 +27,7 @@ const locationSlice = createSlice({
       })
       .addCase(fetchLocations.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.locations = [...state.locations, ...action.payload.locations]; // Append new locations
+        state.locations = [...state.locations, ...action.payload.locations];
         state.nextPage = action.payload.nextPage;
       })
       .addCase(fetchLocations.rejected, (state, action) => {

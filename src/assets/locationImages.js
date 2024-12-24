@@ -7,7 +7,7 @@ import interdimensionalCable from "./images/interdimensional-cable.jpg";
 import immortalityFieldResort from "./images/immortality-field-resort.jpg";
 import postApocalypticEarth from "./images/post-apocalyptic-earth.jpg";
 import purgePlanet from "./images/purge-planet.jpg";
-import venzenulon7 from "./images/venzenulon.jpg"; // Updated to match location name
+import venzenulon7 from "./images/venzenulon.jpg";
 import bepis9 from "./images/bepis-9.jpg";
 import cronenbergEarth from "./images/cronenberg-earth.jpg";
 import nuptia4 from "./images/nuptia-4.jpg";
@@ -20,7 +20,7 @@ import earthReplacementDimension from "./images/earth-replacement-dimension.jpg"
 
 const locationImages = {
   "Earth (C-137)": earthC137,
-  Abadango: abadango, // Removed trailing space
+  Abadango: abadango,
   "Citadel of Ricks": citadelOfRicks,
   "Worldender's lair": worldendersLair,
   "Anatomy Park": anatomyPark,
@@ -28,7 +28,7 @@ const locationImages = {
   "Immortality Field Resort": immortalityFieldResort,
   "Post-Apocalyptic Earth": postApocalypticEarth,
   "Purge Planet": purgePlanet,
-  "Venzenulon 7": venzenulon7, // Corrected name to match API response
+  "Venzenulon 7": venzenulon7,
   "Bepis 9": bepis9,
   "Cronenberg Earth": cronenbergEarth,
   "Nuptia 4": nuptia4,
@@ -36,7 +36,7 @@ const locationImages = {
   "Bird World": birdWorld,
   "St. Gloopy Noops Hospital": stGloopyNoopsHospital,
   "Earth (5-126)": earth5126,
-  "Gromflom Prime": gromflomPrime, // Corrected capitalization
+  "Gromflom Prime": gromflomPrime,
   "Earth (Replacement Dimension)": earthReplacementDimension,
 };
 

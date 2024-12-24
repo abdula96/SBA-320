@@ -1,4 +1,3 @@
-// src/pages/LocationsPage.jsx
 import React from "react";
 import LocationList from "../components/LocationList";
 

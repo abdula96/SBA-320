@@ -1,4 +1,3 @@
-// src/components/EpisodeList.jsx
 import React, { useEffect, useState } from "react";
 
 const EpisodeList = () => {
