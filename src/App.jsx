@@ -9,13 +9,13 @@ const App = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/characters">Characters</Link>
+            <Link to="/SBA320/characters">Characters</Link>
           </li>
           <li>
-            <Link to="/locations">Locations</Link>
+            <Link to="/SBA320/locations">Locations</Link>
           </li>
           <li>
-            <Link to="/episodes">Episodes</Link>
+            <Link to="/SBA320/episodes">Episodes</Link>
           </li>
         </ul>
       </nav>
