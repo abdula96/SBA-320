@@ -16,7 +16,7 @@ ReactDOM.createRoot(root).render(
   <Provider store={store}>
     <Router>
       <Routes>
-        <Route path="/" element={<App />}>
+        <Route path="/SBA320" element={<App />}>
           <Route path="characters" element={<CharactersPage />} />
           <Route path="locations" element={<LocationsPage />} />
           <Route path="episodes" element={<EpisodesPage />} />
