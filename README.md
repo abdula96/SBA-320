@@ -77,8 +77,6 @@ export const fetchCharacters = createAsyncThunk(
     return response.data;
   }
 );
-Why does the code track nextPage for pagination? By tracking nextPage, the app ensures that the next set of characters is properly fetched when the user navigates to the next page.
-Asynchronous Thunks
 fetchCharacters: This async thunk makes a request to the API to retrieve character data for a specific page. It supports optional filtering based on the character's name.
 Request: The API call is made using axios, and query parameters (page and search) are passed.
 Response: The response includes character data, as well as pagination info like the next page URL.
@@ -87,7 +85,6 @@ If the API request fails or there is a network issue, an error message is shown.
 
 Future Improvements
 
-Infinite Scrolling: Implement infinite scrolling for a smoother user experience instead of paginated navigation.
 Character Detail View: Add a detailed view for each character, showing more information like the origin, location, and episode appearances.
 Location and Episode Lists: Add views for locations and episodes from the API.
 State Persistence: Use localStorage or sessionStorage to persist state (e.g., current page or search query) across page reloads.
